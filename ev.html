@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV India</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <span>📞 07771640851
+                </span>
+                <span>✉️ info@evlondon.online</span>
+            </div>
+            
+        </div>
+        <div class="logo-search">
+            <div class="logo">
+                <h1>EVLONDON</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="Search EVs or Brands">
+                <button>Search</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn" onclick="showSection('e-vehicles')">E-Vehicles</a>
+                    
+                </li>
+                <li><a href="#" onclick="showSection('brands')">Brands</a></li>
+                <li><a href="#" onclick="showSection('contribute')">Contribute</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="#" onclick="showSection('login-signup')">Login/Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="section  section-home">
+        
+            
+            <div class="hero-image">
+                <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F5fce8134c7d206d2e4d675519ffaddd6&w=1920&q=100" alt="Hero Image">
+            </div>
+        </div>
+        <h2>Electric Vehicles in London</h2>
+
+<div class="filter-bar">
+  <!-- City Filter -->
+  <div class="filter-item">
+    <label for="city"><i class="fas fa-map-marker-alt"></i> City</label>
+    <select id="city">
+      <option>Select</option>
+      <option>Central London</option>
+      <option>East London</option>
+      <option>West London</option>
+      <option>North London</option>
+      <option>South London</option>
+      <option>Croydon</option>
+      <option>Wembley</option>
+      <option>Stratford</option>
+    </select>
+  </div>
+
+  <!-- Budget Filter -->
+  <div class="filter-item">
+    <label for="budget"><i class="fas fa-pound-sign"></i> Budget</label>
+    <select id="budget">
+      <option>£10,000 - £15,000</option>
+      <option>£15,000 - £20,000</option>
+      <option>£20,000 - £25,000</option>
+      <option>£25,000 - £30,000</option>
+    </select>
+  </div>
+
+  <!-- Range Filter -->
+  <div class="filter-item">
+    <label for="range"><i class="fas fa-tachometer-alt"></i> Range</label>
+    <select id="range">
+      <option>100 - 150 km</option>
+      <option>150 - 200 km</option>
+      <option>200 - 300 km</option>
+      <option>300+ km</option>
+    </select>
+  </div>
+
+  <!-- Search Button -->
+  <button class="search-btn">SEARCH</button>
+</div>
+
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<h2>Popular Electric Vehicles</h2>
+<div class="vehicle-cards" id="vehicle-cards">
+
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://cdn.evindia.online/uploads/vehicle_image/5bebabfc53e7852df2abc489fa5ed74a" alt="Vida V2 Lite">
+    <div class="vehicle-info">
+      <h3>Vida V2 Lite</h3>
+      <p class="price">€ 1,056 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 80 km/h</span>
+        <span>Range: 85 km</span>
+        <span>Waiting: 1M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://cdn.evindia.online/uploads/vehicle_image/6b93482d26fd6b3c52c2806484cc4623" alt="Ola S1 X">
+    <div class="vehicle-info">
+      <h3>Ola S1 X (2kWh)</h3>
+      <p class="price">€ 935 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 90 km/h</span>
+        <span>Range: 121 km</span>
+        <span>Waiting: 2M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://cdn.evindia.online/uploads/vehicle_image/41d7b18b1018196e770fd2bdc6bf82b8" alt="TVS iQube">
+    <div class="vehicle-info">
+      <h3>TVS iQube 2.2 kWh</h3>
+      <p class="price">€ 1,188 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 78 km/h</span>
+        <span>Range: 100 km</span>
+        <span>Waiting: 1.5M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://cdn.evindia.online/uploads/vehicle_image/31dcdef70e5c0429279266833fcd90d5" alt="Ather Rizta S">
+    <div class="vehicle-info">
+      <h3>Ather Rizta S</h3>
+      <p class="price">€ 1,210 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 90 km/h</span>
+        <span>Range: 116 km</span>
+        <span>Waiting: 1.2M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://cdn.evindia.online/uploads/vehicle_image/2025-03-20-09-03-54-blob" alt="Ampere Nexus E">
+    <div class="vehicle-info">
+      <h3>Ampere Nexus E</h3>
+      <p class="price">€ 1,221 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 93 km/h</span>
+        <span>Range: 136 km</span>
+        <span>Waiting: 1M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2Fd3feddcc284e22499e93ad064a99a781&w=1920&q=100" alt="Ather 450X Gen 3">
+    <div class="vehicle-info">
+      <h3>Ather 450X Gen 3</h3>
+      <p class="price">€ 1,387 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 90 km/h</span>
+        <span>Range: 146 km</span>
+        <span>Waiting: 2M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F9b63907bf2566ff03566eea2bfbe9a6b&w=1920&q=100" alt="Revolt RV400">
+    <div class="vehicle-info">
+      <h3>Revolt RV400</h3>
+      <p class="price">€ 1,376 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 85 km/h</span>
+        <span>Range: 150 km</span>
+        <span>Waiting: 2.5M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F390eeebf3c2f135c3bb558f54798a674&w=3840&q=75" alt="Bounce Infinity E1">
+    <div class="vehicle-info">
+      <h3>Bounce Infinity E1</h3>
+      <p class="price">€ 990 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 65 km/h</span>
+        <span>Range: 85 km</span>
+        <span>Waiting: 3M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="data:image/jpeg;base64,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" alt="Bajaj Chetak">
+    <div class="vehicle-info">
+      <h3>Bajaj Chetak</h3>
+      <p class="price">€ 1,499 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 63 km/h</span>
+        <span>Range: 95 km</span>
+        <span>Waiting: 1M</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCMeMt98Lhl4WCKCXlO7VdHGwTr4xtD3ctw&s" alt="Bajaj Chetak Premium">
+    <div class="vehicle-info">
+      <h3>Bajaj Chetak Premium</h3>
+      <p class="price">€ 1288 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 73 km/h</span>
+        <span>Range: 108 km</span>
+        <span>Waiting: 2M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBHAwtRDrCH0HvHGjVDyiBkuQULmJDpDS6fw&s" alt="Simple One">
+    <div class="vehicle-info">
+      <h3>Simple One</h3>
+      <p class="price">€ 1199 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 105 km/h</span>
+        <span>Range: 212 km</span>
+        <span>Waiting: 3M</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vehicle-card">
+    <div class="badge">Popular</div>
+    <img src="data:image/jpeg;base64,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" alt="Hero Electric Photon">
+    <div class="vehicle-info">
+      <h3>Hero Electric Photon</h3>
+      <p class="price">€ 1050 <span>Onwards</span></p>
+      <div class="specs">
+        <span>Top Speed: 45 km/h</span>
+        <span>Range: 90 km</span>
+        <span>Waiting: 1.2M</span>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+
+            <!-- Add more vehicle cards here -->
+        </div>
+    </section>
+    
+    <section id="e-vehicles" class="ev-section section">
+      <h2 class="section-title">EV's for you</h2>
+  
+      <div class="ev-container">
+        
+        <!-- Sidebar Filter -->
+        <aside class="filter-sidebar">
+          <h3>Filter By</h3>
+          <label for="city">City</label>
+          <select id="city">
+            <option>Central London</option>
+            <option>East London</option>
+            <option>West London</option>
+            <option>North London</option>
+            <option>South London</option>
+            <option>Croydon</option>
+            <option>Wembley</option>
+            <option>Stratford</option>
+          </select>
+  
+          <h4>Vehicle Type</h4>
+          <div class="vehicle-type">
+            <label><input type="checkbox" checked> Two wheeler</label>
+            <div class="sub-type">
+              <label><input type="checkbox" checked> Scooter</label>
+              <label><input type="checkbox" checked> Bike</label>
+            </div>
+            <label><input type="checkbox" checked> Four wheeler</label>
+            <label><input type="checkbox"> All</label>
+          </div>
+        </aside>
+  
+        <!-- EV Display Area -->
+        <div class="ev-display">
+          <div class="ev-filters">
+            <label>Modify your results
+              <select id="vehicle-filter">
+                <option value="both">Both</option>
+                <option value="two-wheeler">Two Wheeler</option>
+                <option value="four-wheeler">Four Wheeler</option>
+              </select>
+            </label>
+  
+            <label>Sort By:
+              <select>
+                <option>Popular</option>
+                <option>Price Low to High</option>
+                <option>Range High to Low</option>
+              </select>
+            </label>
+          </div>
+  
+          <!-- EV Cards -->
+          <div class="ev-cards">
+            <div class="ev-card" data-type="two-wheeler">
+              <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2Ffd11d13ac5dc5ffe0f6e52ea7f9c4922&w=1920&q=100" alt="Ola S1 Pro">
+              <h4>Ola<br><span>S1 Pro (2nd Generation)</span></h4>
+              <p class="price">€ 1290 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 120 km/h</span>
+                <span>Range: 195 km</span>
+                <span>Waiting: 15D</span>
+              </ul>
+            </div>
+          
+            <div class="ev-card" data-type="two-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7xn9qHVf8G1m6hL2adjt_OagYO0-oZeJi7g&s" alt="Ola S1 X Plus">
+              <h4>Ola<br><span>S1 X Plus</span></h4>
+              <p class="price">€ 1567 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 90 km/h</span>
+                <span>Range: 151 km</span>
+                <span>Waiting: 3M</span>
+              </ul>
+            </div>
+          
+            <div class="ev-card" data-type="two-wheeler">
+              <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F975ac0e028a991a744b2426f64a9dbb2&w=3840&q=75" alt="Ola S1 X">
+              <h4>Ola<br><span>S1 X (2kWh)</span></h4>
+              <p class="price">€ 1239 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 85 km/h</span>
+                <span>Range: 95 km</span>
+                <span>Waiting: 3M</span>
+              </ul>
+            </div>
+          
+          
+          
+  
+            
+
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="data:image/jpeg;base64,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" alt="Audi e-tron GT">
+              <h4>Audi<br><span>e-tron GT</span></h4>
+              <p class="price">€ 59393 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 250 km/h</span>
+                  <span>Range: 500 km</span>
+                  <span>Waiting: 3M</span>
+                
+              </ul>
+            </div>
+
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiAntqH2b6A_JaN7aF-duyrxkDMr9sQA5yzQ&s" alt="Tesla Model S">
+              <h4>Tesla<br><span>Model S</span></h4>
+              <p class="price">€ 58,000<span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 322 km/h</span>
+                <span>Range: 637 km</span>
+                <span>Waiting: 4M</span>
+              </ul>
+            </div>
+
+           
+              <div class="ev-card" data-type="two-wheeler">
+                <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F3bc70be2fa819e1bff8b3bb94132b702&w=640&q=80" alt="SHero Electric
+                Optima CX(Dual)">
+                <h4>Hero<br><span>SHero Electric
+                  Optima CX(Dual)</span></h4>
+                <p class="price">€ 1080 <span>Onwards</span></p>
+                <ul class="ev-specs">
+                  <span>Top Speed: 50 km/h</span>
+                  <span>Range: 195 km</span>
+                  <span>Waiting: 15D</span>
+                </ul>
+              </div>
+            
+              <div class="ev-card" data-type="two-wheeler">
+                <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F2025-02-25-15-02-21-blob&w=3840&q=75" alt="Revolt RV BlazeX">
+                <h4>Revolt<br><span>Revolt RV BlazeX</span></h4>
+                <p class="price">€ 1234 <span>Onwards</span></p>
+                <ul class="ev-specs">
+                  <span>Top Speed: 90 km/h</span>
+                  <span>Range: 151 km</span>
+                  <span>Waiting: 3M</span>
+                </ul>
+              </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="data:image/jpeg;base64,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" alt="BMW i7">
+              <h4>BMW<br><span>i7</span></h4>
+              <p class="price">€ 65,000  <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 240 km/h</span>
+                <span>Range: 625 km</span>
+                <span>Waiting: 2M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="data:image/jpeg;base64,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" alt="Mercedes EQS">
+              <h4>Mercedes<br><span>EQS</span></h4>
+              <p class="price">€ 85,000 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 210 km/h</span>
+                <span>Range: 857 km</span>
+                <span>Waiting: 3M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNWun4CRgnMwBSoZmwEtsa4TqzlOLtUz_AHg&s" alt="Jaguar I-Pace">
+              <h4>Jaguar<br><span>I-Pace</span></h4>
+              <p class="price">€ 75,000 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 200 km/h</span>
+                <span>Range: 470 km</span>
+                <span>Waiting: 2M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvIZHq3P3pDNUdfTSGMwuRtdSUPyXM_Bppg&s" alt="Porsche Taycan">
+              <h4>Porsche<br><span>Taycan</span></h4>
+              <p class="price">€ 90128 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 260 km/h</span>
+                <span>Range: 484 km</span>
+                <span>Waiting: 4M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLDp86J9oUAEuCS-qFGXg_goHeikWNIR7uLg&s" alt="Kia EV6">
+              <h4>Kia<br><span>EV6</span></h4>
+              <p class="price">€ 60567 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 192 km/h</span>
+                <span>Range: 708 km</span>
+                <span>Waiting: 1M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOPQxEvyFe3VJ5AsBOUFbFkTE_LUcfZ4tEzQ&s" alt="Hyundai IONIQ 5">
+              <h4>Hyundai<br><span>IONIQ 5</span></h4>
+              <p class="price">€ 47234 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 185 km/h</span>
+                <span>Range: 631 km</span>
+                <span>Waiting: 1.5M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="data:image/jpeg;base64,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" alt="Tata Nexon EV">
+              <h4>Tata<br><span>Nexon EV</span></h4>
+              <p class="price">€ 30000 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 140 km/h</span>
+                <span>Range: 465 km</span>
+                <span>Waiting: 0.5M</span>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZZZdyfCIMpirDffCGxKBOqf0gtjrUxAwwdg&s" alt="MG ZS EV">
+              <h4>MG<br><span>ZS EV</span></h4>
+              <p class="price">€ 43000 <span>Onwards</span></p>
+              <ul class="ev-specs">
+                <li>Top Speed: 175 km/h</li>
+                <li>Range: 461 km</li>
+                <li>Waiting: 1M</li>
+              </ul>
+            </div>
+            
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9PV0UU3K83rb4swqVZ37X_fcxjid_mriYSw&s" alt="BYD Seal">
+              <h4>BYD<br><span>Seal</span></h4>
+              <p class="price">€ 60943<span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 180 km/h</span>
+                <span>Range: 650 km</span>
+                <span>Waiting: 2M</span>
+              </ul>
+            </div>
+
+            <div class="ev-card" data-type="four-wheeler">
+              <img src="https://evindia.online/_next/image?url=https%3A%2F%2Fcdn.evindia.online%2Fuploads%2Fvehicle_image%2F9223448d69e34e19d9b2489b6c5e0fd1&w=640&q=80" alt="MG
+              Comet EV (Executive)">
+              <h4>MG<br><span>MG
+                Comet EV (Executive)</span></h4>
+              <p class="price">€ 30000<span>Onwards</span></p>
+              <ul class="ev-specs">
+                <span>Top Speed: 180 km/h</span>
+                <span>Range: 650 km</span>
+                <span>Waiting: 2M</span>
+              </ul>
+            </div>
+            
+
+            
+            
+  
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    
+    <section id="brands" class="section" style="display: none;">
+      <h2>Electric Vehicle Companies</h2>
+      <div class="brand-cards" id="brand-cards">
+  
+          <!-- Existing Brands (Kept as is) -->
+          <!-- ... your existing brand cards ... -->
+  
+          <!-- New Brands with London Address -->
+          <!-- EV Brand Cards -->
+<div class="brand-cards" id="brand-cards">
+  
+  <!-- Microlino -->
+  
+
+  <!-- Ola Electric -->
+  <div class="brand-card" onclick="navigateToBrand('ola-electric')">
+    <img src="https://cdn.evindia.online/uploads/company/295e9629edadfb18e5a6c8a4e2d6096a" alt="Ola Electric EV">
+    <p>Ola Electric EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 25</p>
+    <p>Bengaluru, Karnataka</p>
+  </div>
+
+  <!-- TVS EV -->
+  <div class="brand-card" onclick="navigateToBrand('tvs-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/cf24dd141d7c3b6eea3b9bd5ea9a12a3" alt="TVS EV">
+    <p>TVS EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 6</p>
+    <p>Hosur, Tamil Nadu</p>
+  </div>
+
+  <!-- VIDA World -->
+  <div class="brand-card" onclick="navigateToBrand('vida-world-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/691a831b3e69d01f50d7506cbe914d87" alt="VIDA World EV">
+    <p>VIDA World EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 6</p>
+    <p>New Delhi, Delhi</p>
+  </div>
+
+  <!-- Joy e-bike -->
+  <div class="brand-card" onclick="navigateToBrand('joy-e-bike')">
+    <img src="https://cdn.evindia.online/uploads/company/79c804b08185e7e90997501815619825" alt="Joy e-bike">
+    <p>Joy e-bike</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 14</p>
+    <p>Vadodara, Gujarat</p>
+  </div>
+
+  <!-- Ather Energy -->
+  <div class="brand-card" onclick="navigateToBrand('ather-energy-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/bba91dc0ab76d1fa24d0253d03d02506" alt="Ather Energy EV">
+    <p>Ather Energy EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 13</p>
+    <p>Bengaluru, Karnataka</p>
+  </div>
+
+  <!-- Revolt Motors -->
+  <div class="brand-card" onclick="navigateToBrand('revolt-motors-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/4a73a289e6df38b37b02c81e670c7170" alt="Revolt Motors EV">
+    <p>Revolt Motors EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 4</p>
+    <p>Gurgaon, Haryana</p>
+  </div>
+
+  <!-- Tata Motors -->
+  <div class="brand-card" onclick="navigateToBrand('tata-motors-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/ed1d7466e5257d7654ec1c1bdf900c22" alt="Tata Motors EV">
+    <p>Tata Motors EV</p>
+    <p>Vehicles Types: Four wheeler</p>
+    <p>Total Vehicles: 8</p>
+    <p>Mumbai, Maharashtra</p>
+  </div>
+
+  <!-- Bajaj EV -->
+  <div class="brand-card" onclick="navigateToBrand('bajaj-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/ff89880e890c88ac718a424b597ee0af" alt="Bajaj EV">
+    <p>Bajaj EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 5</p>
+    <p>Pune, Maharashtra</p>
+  </div>
+
+  <!-- BYD EV -->
+  <div class="brand-card" onclick="navigateToBrand('byd-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/2022-11-14-15-11-10-blob" alt="BYD EV">
+    <p>BYD EV</p>
+    <p>Vehicles Types: Four wheeler</p>
+    <p>Total Vehicles: 9</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+  <!-- MG Motor -->
+  <div class="brand-card" onclick="navigateToBrand('mg-motor-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/d1fe004c5161e2b909d5751784e82380" alt="MG Motor EV">
+    <p>MG Motor EV</p>
+    <p>Vehicles Types: Four wheeler</p>
+    <p>Total Vehicles: 7</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+  <!-- Kia EV -->
+  <div class="brand-card" onclick="navigateToBrand('kia-ev')">
+    <img src="https://cdn.evindia.online/uploads/company/2023-01-03-12-01-02-blob" alt="Kia EV">
+    <p>Kia EV</p>
+    <p>Vehicles Types: Four wheeler</p>
+    <p>Total Vehicles: 6</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+  <div class="brand-card" onclick="navigateToBrand('microlino')">
+    <img src="data:image/jpeg;base64,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" alt="Microlino EV">
+    <p>Microlino EV</p>
+    <p>Vehicles Types: Microcar</p>
+    <p>Total Vehicles: 3</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+  <!-- Zapp -->
+  <div class="brand-card" onclick="navigateToBrand('zapp-ev')">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJue2iPbVtuFfIPMzqG5auED1i3_YRyCCRuA&s" alt="Zapp EV">
+    <p>Zapp EV</p>
+    <p>Vehicles Types: Two wheeler</p>
+    <p>Total Vehicles: 2</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+  <!-- Pininfarina -->
+  <div class="brand-card" onclick="navigateToBrand('Tylos E Vehicle')">
+    <img src="https://cdn.evindia.online/uploads/company/2022-07-14-09-07-24-blob" alt="Tylos E Vehicle">
+    <p>Pininfarina EV</p>
+    <p>Vehicles Types: Four wheeler</p>
+    <p>Total Vehicles: 2</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+</div>
+
+      </div>
+  </section>
+  
+    
+    <section id="contribute" class="section" style="display: none;">
+        <h2>Contribute</h2>
+        <p>FIND OUT HOW YOU CAN CONTRIBUTE TO HELP THE ENVIRONMENT </p>
+        <div class="contribute-cards">
+          <div class="contribute-cards">
+            <div class="contribute-card">
+                <h3> ♻️ Recycling</h3>
+                <p>Recycling is the process of converting waste materials into new products, thereby reducing the need to consume fresh raw materials. It plays a vital role in environmental conservation, energy saving, and the reduction of pollution.
+
+                  Modern society generates vast amounts of waste every day, much of which ends up in landfills or the ocean. Recycling helps mitigate this issue by giving a second life to materials such as plastic, glass, paper, and metal. For instance, recycling one ton of paper can save 17 trees, 7,000 gallons of water, and enough energy to power an average home for six months.
+                  
+                  In the UK and globally, while recycling rates have improved, challenges still exist due to growing consumerism and improper segregation of waste. Many products are thrown away due to a lack of awareness or infrastructure for proper recycling.</p>
+            </div>
+            <div class="contribute-card">
+                <h3> 🚴‍♂️Cycle</h3>
+                <p>Cycling is more than just a mode of transport; it's a lifestyle choice that benefits your health and the environment. In urban environments, cycling offers a cleaner alternative to fossil fuel-based transportation, reducing traffic congestion and air pollution.
+
+                  A single bicycle ride emits zero carbon emissions. If more people switched to cycling for their daily commutes, cities would see significant drops in pollution levels and noise. Furthermore, studies show that individuals who cycle regularly enjoy better cardiovascular health, improved mental well-being, and reduced risk of chronic diseases.
+                  
+                  Beyond health, cycling is also economical. The cost of maintaining a bike is far less than a car or motorbike. Governments around the world are recognizing the value of cycling and are investing in cycling lanes, bike-sharing services, and safety measures.</p>
+            </div>
+            <div class="contribute-card">
+                <h3> ☀️Solar Panel</h3>
+                <p>Solar energy is one of the most abundant and accessible sources of renewable energy. Solar panels capture sunlight and convert it into electricity using photovoltaic (PV) cells. This clean energy source is revolutionizing the way we power our homes, industries, and vehicles.
+
+                  Unlike coal or gas, solar power does not emit greenhouse gases during generation, making it a crucial solution in the fight against climate change. Installing solar panels can significantly reduce your electricity bills and carbon footprint. Even in cloudy regions, modern solar panels can generate ample energy due to improved technology.
+                  
+                  As battery storage and solar efficiency improve, solar systems can power homes completely off-grid. Many countries, including the UK and India, are offering subsidies, tax benefits, and net metering options to encourage homeowners and businesses to adopt solar energy.</p>
+            </div>
+            <div class="contribute-card">
+                <h3>💡Energy Efficient Light Bulb</h3>
+                <p>Energy-efficient light bulbs—such as LEDs and CFLs—consume significantly less electricity than traditional incandescent bulbs, making them an easy yet impactful way to reduce energy use in homes and offices.
+
+                  LEDs (Light Emitting Diodes), for example, use up to 80% less energy and can last 25 times longer than traditional bulbs. They convert a higher percentage of electricity into light, minimizing waste in the form of heat.
+                  
+                  Switching to energy-efficient lighting is one of the fastest and simplest ways to lower your carbon footprint. When widely adopted, it can lead to significant reductions in electricity demand, easing the strain on power grids and reducing the need for fossil-fuel-generated electricity.</p>
+            </div>
+        
+        </div>
+    </section>
+    
+    <section id="about" class="section section">
+      <div class="about-container">
+          <h2>About Us</h2>
+          <p>
+              We are EV India, committed to promoting the adoption of electric vehicles across the country. Founded with the mission to provide sustainable and eco-friendly transportation solutions, we are at the forefront of the EV revolution in India.
+          </p>
+          <p>
+              Our initiatives include setting up charging infrastructure, partnering with leading EV manufacturers, and creating awareness about the benefits of electric vehicles. We believe that electric vehicles are the future of transportation, offering a cleaner, greener alternative to traditional fossil fuel-powered vehicles.
+          </p>
+          <p>
+              Join us in our journey to make India a leader in electric mobility. Together, we can reduce pollution, save energy, and create a healthier environment for future generations. Our commitment includes:
+          </p>
+          <ul>
+              <li>Promoting sustainable living</li>
+              <li>Encouraging the use of electric vehicles</li>
+              <li>Ensuring widespread availability of charging stations</li>
+              <li>Supporting innovation in EV technology</li>
+          </ul>
+          <!-- Just a signup button that navigates to the login section -->
+<button onclick="showSection('login-signup')" style="padding: 10px 20px; background-color: #007bff; border: none; color: #fff; border-radius: 5px; cursor: pointer;">
+  Sign Up
+</button>
+
+          
+      </div>
+  </section>
+  
+    <!-- Contact Form Section -->
+<section id="contact" class="contact-section section">
+  <div class="contact-wrapper">
+    
+    <!-- Contact Info -->
+    <div class="contact-left">
+      <h2>Contact Information</h2>
+      <div class="contact-block">
+        <h3>For Business Inquiry</h3>
+        <p>📞 0800 917 3208</p>
+        <p>📧 business@evlondon.online</p>
+      </div>
+      <div class="contact-block">
+        <h3>Customer Helpline</h3>
+        <p>📞 0207 700 0888</p>
+        <p>📧 info@Evlondon.online</p>
+      </div>
+      <div class="contact-block">
+        <h3>For Career</h3>
+        <p>📞 02476 572000​</p>
+        <p>📧 hr@evlondon.online</p>
+      </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="contact-right">
+      <h2>Give us your feedback</h2>
+      <p>We want to know what you thought of your experience at EVIndia, so we'd love to hear your valuable feedback.</p>
+
+      <form action="https://formspree.io/f/xwplwlpe" method="POST">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-row">
+          <input type="text" name="phone" placeholder="Contact Number" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <textarea name="message" placeholder="Enter your message..." rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+      
+      <section id="login-signup" class="login-section section">
+        <div class="login-wrapper">
+            <!-- Left Panel -->
+            <div class="login-left">
+                <div class="login-image">
+                    <img src="https://evindia.online/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogin-mob.237dbab3.jpg&w=2048&q=75" alt="Login visual">
+                    <h1>SIGN IN</h1>
+                </div>
+            </div>
+    
+            <!-- Right Panel -->
+            <div class="login-right">
+                <h2>Sign In Your Account</h2>
+                <p>If you don’t have an account, you can 
+                    <a href="#" onclick="showSection('signup')">Sign Up</a>
+                  </p>
+                  
+    
+                  <form class="login-form" onsubmit="handleLogin(event)">
+                    <input type="text" placeholder="Enter Your email or username" required>
+                    <input type="password" placeholder="Enter Your password" required>
+                  
+                    <div class="login-extra">
+                      <a href="#" onclick="showSection('forgot-password')">Forgot Password or username?</a>
+                    </div>
+                  
+                    <button type="submit" class="btn-yellow">Sign In</button>
+                  
+                    <div class="divider">OR</div>
+                  
+                    <button type="button" class="google-login">
+                      <img src="https://evindia.online/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGoogle.f8581d86.png&w=48&q=75" alt="Google"> Continue with Google
+                    </button>
+                  
+                    <button type="button" class="Facebook-login">
+                      <img src="https://evindia.online/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FFB.cbb87ca0.png&w=48&q=75" alt="Facebook"> Continue with Facebook
+                    </button>
+                  </form>
+                  </div>
+                    </div>
+                </section>
+                  
+                <section id="forgot-password" class="section" style="display: none;">
+                    <div class="forgot-password-wrapper">
+                      <h2>Reset Your Password</h2>
+                      <p>Enter your registered email and we’ll send you a password reset link.</p>
+                  
+                      <form class="forgot-form">
+                        <input type="email" placeholder="Enter your registered email" required>
+                        <button type="submit">Send Reset Link</button>
+                      </form>
+                  
+                      <p class="back-to-login">
+                        Remembered your password? <a href="#" onclick="showSection('login-signup')">Back to Login</a>
+                      </p>
+                    </div>
+                  </section>
+
+                  <section id="signup" class="section" style="display: none;">
+                    <div class="signup-wrapper">
+                      <h2>Create Your EVLONDON Account</h2>
+                      <p>Register to explore electric vehicles, post reviews, and join our community.</p>
+                  
+                      <form class="signup-form" onsubmit="handleRegister(event)">
+
+                        <!-- Basic Info -->
+                        <div class="form-row">
+                          <input type="text" placeholder="Full Name" required>
+                          <input type="email" placeholder="Email Address" required>
+                        </div>
+                  
+                        <div class="form-row">
+                          <input type="tel" placeholder="Phone Number" required>
+                          <input type="password" placeholder="Create Password" required>
+                        </div>
+                  
+                        <!-- EV-Related Info -->
+                        <div class="form-row">
+                          <input type="text" placeholder="City / Location" required>
+                          <select required>
+                            <option value="">Interested In</option>
+                            <option value="2-wheeler">2-Wheeler EV</option>
+                            <option value="3-wheeler">3-Wheeler EV</option>
+                            <option value="4-wheeler">4-Wheeler EV</option>
+                            <option value="commercial">Commercial EV</option>
+                            <option value="charging">Charging Solutions</option>
+                          </select>
+                        </div>
+                  
+                        <textarea placeholder="Why are you joining EVLONDON? (Optional)" rows="3"></textarea>
+                  
+                        <button type="submit">Register</button>
+                  
+                        <p class="back-to-login">
+                          Already have an account? <a href="#" onclick="showSection('login-signup')">Sign In</a>
+                        </p>
+                      </form>
+                    </div>
+                  </section>
+                  
+                  
+                  
+                
+                <div id="loading" class="loading-overlay">
+                    <div class="loading-spinner"></div>
+                    <p>Loading...</p>
+                </div>
+            </body>
+            </html>
